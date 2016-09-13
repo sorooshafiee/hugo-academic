@@ -112,7 +112,7 @@
                     {{ partial "article_metadata" (dict "content" . "is_list" 1) }}
                     <p class="article-style" itemprop="articleBody">
                         {{ if .Truncated }}
-                            {{ printf "%s" .Summary | markdownify }}
+                            {{ .Summary }}
                         {{ else }}
                             {{ .Content }}
                         {{ end }}
